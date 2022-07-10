@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#682EDC"
+    tools:context=".activities.SplashScreen">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_wink_logo_splash_screen_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo_white" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/figno_regular"
+                android:text="Wink"
+                android:textColor="@color/white"
+                android:textSize="36dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_welcome_area_splash_screen_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/welcome_text_view_splash_screen_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_bold"
+                android:text="ברוכים הבאים ל-Wink!"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:gravity="center_horizontal"/>
+
+
+            <Button
+                android:id="@+id/what_todo_btn_splash_screen_activity"
+                android:layout_width="170dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/assistant_regular"
+                android:letterSpacing="0"
+                android:text="מה עושים כאן?"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:backgroundTint="#FFFFFF" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_skip_area_splash_screen_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant_regular"
+            android:text="דלג"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

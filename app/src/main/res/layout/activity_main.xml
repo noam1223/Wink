@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_constrain_layout_main_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textDirection="rtl"
+    tools:context=".activities.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/onboarding_back_linear_layout_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            app:backgroundTint="#ffffff"/>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/wave_text_view_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/assistant_bold"
+        android:text="היי"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/wave_icon_img_view_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ic_wave_hand"
+        app:layout_constraintBottom_toBottomOf="@id/wave_text_view_main_activity"
+        app:layout_constraintRight_toLeftOf="@id/wave_text_view_main_activity"
+        app:layout_constraintTop_toTopOf="@id/wave_text_view_main_activity" />
+
+
+    <ImageView
+        android:id="@+id/move_to_onboarding_img_view_main_activity"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_question"
+        app:layout_constraintTop_toTopOf="@+id/my_tasks_text_view_main_activity"
+        app:layout_constraintBottom_toBottomOf="@+id/my_tasks_text_view_main_activity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"/>
+
+
+
+    <TextView
+        android:id="@+id/my_tasks_text_view_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/assistant_bold"
+        android:text="המשימות שלי"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wave_text_view_main_activity" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasks_recycler_view_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintTop_toBottomOf="@id/my_tasks_text_view_main_activity"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain_layout_no_tasks_bg_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_alarm_clock_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/alarm_clock_img_view_main_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_alarm_clock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alarm_clock_img_view_main_activity">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:text="עדיין לא הוספת משימות!"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:text="הגיע הזמן להוסיף את המשימה הראשונה שלך"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.noam.wink.helper.uihelper.MovableFloatingActionButton
+        android:id="@+id/add_task_float_btn_main_activity"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_plus"
+        app:backgroundTint="#682EDC"
+        app:fabCustomSize="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/move_to_onboarding_img_view_main_activity"
+        app:maxImageSize="46dp"
+        app:tint="#ffffff" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_onboarding1_bg_main_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/onboarding_pop_up_background"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/add_task_float_btn_main_activity"
+        app:layout_constraintLeft_toLeftOf="@id/add_task_float_btn_main_activity"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text="מוסיפים כאן משימה חדשה\n(דף עבודה, הכנה למבחן או כל משימה אחרת)"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/onboarding_btn1_main_activity"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/onboarding_pop_up_background"
+            android:backgroundTint="#682EDC"
+            android:fontFamily="@font/assistant_regular"
+            android:letterSpacing="0"
+            android:text="הבנתי"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/arrow1_onboarding_img_view_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-4dp"
+        android:src="@drawable/ic_arrow"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/linear_layout_onboarding1_bg_main_activity"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_onboarding1_bg_main_activity" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain_layout_on_boarding2_pop_up_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <include
+            android:id="@+id/include_task_pop_up_main_activity"
+            layout="@layout/add_task_pop_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_onboarding2_bg_main_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/onboarding_pop_up_background"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            app:layout_constraintLeft_toLeftOf="@+id/include_task_pop_up_main_activity"
+            app:layout_constraintRight_toRightOf="@id/include_task_pop_up_main_activity"
+            app:layout_constraintTop_toBottomOf="@+id/include_task_pop_up_main_activity">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="מגדירים כמה זמן יש לנו לביצוע המשימה"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/onboarding_btn2_main_activity"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/onboarding_pop_up_background"
+                android:backgroundTint="#682EDC"
+                android:fontFamily="@font/assistant_regular"
+                android:letterSpacing="0"
+                android:text="הבנתי"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/arrow2_onboarding_img_view_main_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="-1dp"
+            android:rotation="180"
+            android:src="@drawable/ic_arrow"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/linear_layout_onboarding2_bg_main_activity"
+            app:layout_constraintRight_toRightOf="@+id/linear_layout_onboarding2_bg_main_activity" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_onboarding3_bg_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/onboarding_pop_up_background"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/tasks_recycler_view_main_activity"
+        app:layout_constraintBottom_toBottomOf="@id/tasks_recycler_view_main_activity"
+        app:layout_constraintTop_toTopOf="@id/tasks_recycler_view_main_activity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text="בכל שלב ניתן להקליק על המשימה\nבכדי לערוך את תתי המשימות שלה"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/onboarding_btn3_main_activity"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/onboarding_pop_up_background"
+            android:backgroundTint="#682EDC"
+            android:fontFamily="@font/assistant_regular"
+            android:letterSpacing="0"
+            android:text="הבנתי"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/arrow3_onboarding_img_view_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="-1dp"
+        android:rotation="180"
+        android:src="@drawable/ic_arrow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/linear_layout_onboarding3_bg_main_activity"
+        app:layout_constraintRight_toRightOf="@+id/linear_layout_onboarding3_bg_main_activity" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_skip_area_onboarding_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant_regular"
+            android:text="דלג"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

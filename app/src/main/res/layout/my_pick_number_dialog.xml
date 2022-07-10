@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/edit_text_rounded"
+        android:layoutDirection="rtl"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/x_img_view_my_pick_number_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_x" />
+
+        </LinearLayout>
+
+
+
+        <TimePicker
+            android:id="@+id/time_picker_my_pick_number_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            app:layout_constraintBottom_toTopOf="@+id/time_picker_my_pick_number_dialog"
+            app:layout_constraintLeft_toLeftOf="@id/time_picker_my_pick_number_dialog"
+            app:layout_constraintRight_toRightOf="@id/time_picker_my_pick_number_dialog">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="דקות"
+                android:layout_weight="1"
+                android:fontFamily="@font/assistant_regular"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="שעות"
+                android:layout_weight="1"
+                android:fontFamily="@font/assistant_regular"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textAlignment="center"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <Button
+            android:id="@+id/save_btn_my_pick_number_dialog_pop_up"
+            android:layout_width="118dp"
+            android:layout_height="48dp"
+            android:text="שמירה"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/assistant_regular"
+            android:background="@drawable/btn_rounded"
+            app:backgroundTint="#682EDC"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_constrain_layout_play_task_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".activities.PlayTaskActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/onboarding_back_linear_layout_play_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            app:backgroundTint="#ffffff"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/x_img_view_play_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_x" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/task_name_text_view_play_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/assistant_regular"
+        android:text="עבודה בהיסטוריה"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/x_img_view_play_task_activity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/x_img_view_play_task_activity" />
+
+
+
+    <TextView
+        android:id="@+id/current_sub_task_play_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/assistant_bold"
+        android:text="קריאת הוראות"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_progress_area_play_task_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_sub_task_play_task_activity">
+
+
+        <ProgressBar
+            android:id="@+id/donut_progress_bar_play_task_activity"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:indeterminateOnly="false"
+            android:max="9"
+            android:progress="1"
+            android:progressDrawable="@drawable/circuler_progress_bar_run"
+            android:rotation="-90" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/time_of_sub_task_text_view_play_task_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:text="00:00"
+                android:textColor="#F7000000"
+                android:textSize="36dp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_controller_play_task_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative_layout_progress_area_play_task_activity">
+
+
+        <ImageView
+            android:id="@+id/forward_img_view_play_task_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/done_img_view_play_task_activity"
+            android:src="@drawable/ic_move_forward" />
+
+
+        <ImageView
+            android:id="@+id/done_img_view_play_task_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_finish" />
+
+
+        <ImageView
+            android:id="@+id/pause_img_view_play_task_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="24dp"
+            android:layout_toLeftOf="@+id/done_img_view_play_task_activity"
+            android:src="@drawable/ic_play_circle_filled" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:gravity="center"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <TextView
+            android:id="@+id/next_sub_task_head_line_play_task_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text="תת המשימה הבאה:"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <TextView
+            android:id="@+id/next_sub_task_text_view_play_task_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/assistant_bold"
+            android:text="בחירת שותף"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+
+    <!--    ON BOARDING 1-->
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_onboarding1_bg_play_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/onboarding_pop_up_background"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/relative_layout_controller_play_task_activity"
+        app:layout_constraintRight_toRightOf="@+id/relative_layout_controller_play_task_activity"
+        app:layout_constraintBottom_toTopOf="@+id/relative_layout_controller_play_task_activity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text="תוכלו לבחור להשלים את תת המשימה,\nלעצור להפסקה או לקפוץ לתת המשימה הבאה"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/onboarding_btn1_play_task_activity"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/onboarding_pop_up_background"
+            android:backgroundTint="#682EDC"
+            android:fontFamily="@font/assistant_regular"
+            android:letterSpacing="0"
+            android:text="הבנתי, אפשר להמשיך!"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/arrow1_img_view_play_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:src="@drawable/ic_arrow"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_onboarding1_bg_play_task_activity"
+        app:layout_constraintLeft_toLeftOf="@+id/relative_layout_controller_play_task_activity"
+        app:layout_constraintRight_toRightOf="@+id/relative_layout_controller_play_task_activity"/>
+
+
+    <!--    ON BOARDING 1-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

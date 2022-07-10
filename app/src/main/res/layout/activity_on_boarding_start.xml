@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:layout_height="match_parent"
+    tools:context=".activities.onboarding.OnBoardingStart"
+    android:weightSum="2">
+
+
+
+    <ImageView
+        android:id="@+id/onboarding_bg_img_view_onboarding_start_activity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_onboarding_bg"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_weight=".85"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layoutDirection="rtl"
+        android:layout_weight="1.15">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="לומדים להשתמש\n נכון בזמן"
+        android:textSize="42dp"
+        android:fontFamily="@font/assistant_bold"
+        android:textColor="#682EDC"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="יש כל כך הרבה מה לעשות וכל כך מעט זמן!\nקיבלת משימה? מעולה, בואו נעשה סדר\nלפני שמתחילים..."
+            android:textSize="22dp"
+            android:fontFamily="@font/assistant_regular"
+            android:textColor="@color/black"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"/>
+
+
+
+        <Button
+            android:id="@+id/lets_start_btn_on_boarding_start_activity"
+            android:layout_width="242dp"
+            android:layout_height="54dp"
+            android:background="@drawable/btn_rounded"
+            android:backgroundTint="#682EDC"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="בואו נתחיל!"
+            android:fontFamily="@font/assistant_regular"
+            android:letterSpacing="0"
+            android:textSize="20dp"
+            android:layout_marginTop="40dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

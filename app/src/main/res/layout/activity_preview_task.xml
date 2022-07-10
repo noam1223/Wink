@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PreviewTaskActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/back_img_view_preview_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/group_play_img_view_preview_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_group_play"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="88dp"/>
+
+
+
+    <TextView
+        android:id="@+id/my_task_text_view_preview_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/group_play_img_view_preview_task_activity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        android:text="עבודה בהיסטוריה"
+        android:textSize="24dp"
+        android:fontFamily="@font/assistant_bold"
+        android:textColor="@color/black"/>
+
+
+
+    <TextView
+        android:id="@+id/my_task_time_text_view_preview_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/my_task_text_view_preview_task_activity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="25 דקות"
+        android:textSize="20dp"
+        android:fontFamily="@font/assistant_regular"
+        android:textColor="@color/black"/>
+
+
+
+    <ListView
+        android:id="@+id/sub_tasks_list_view_preview_task_activity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_task_time_text_view_preview_task_activity"
+        app:layout_constraintBottom_toTopOf="@id/start_play_task_btn_preview_task_activity"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:overScrollMode="never" />
+
+
+
+
+    <Button
+        android:id="@+id/start_play_task_btn_preview_task_activity"
+        android:layout_width="118dp"
+        android:layout_height="48dp"
+        android:text="מתחילים"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/assistant_regular"
+        android:background="@drawable/btn_rounded"
+        app:backgroundTint="#682EDC"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

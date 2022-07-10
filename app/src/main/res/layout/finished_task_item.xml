@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:weightSum="2"
+    android:orientation="horizontal"
+    android:layoutDirection="rtl"
+    android:gravity="center">
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sub_constraint_layout_finished_task_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/sub_task_name_text_view_finished_task_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant_bold"
+            android:text="שם המשימה"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sub_task_time_text_view_finished_task_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant_regular"
+            android:text="דקות המשימה"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintRight_toRightOf="@+id/sub_task_name_text_view_finished_task_item"
+            app:layout_constraintTop_toBottomOf="@+id/sub_task_name_text_view_finished_task_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".1"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+
+        <View
+            android:id="@+id/round_black_view_preview_sub_task_item"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/ic_black_round"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#682EDC"
+            app:layout_constraintRight_toRightOf="@+id/round_black_view_preview_sub_task_item"
+            app:layout_constraintLeft_toLeftOf="@+id/round_black_view_preview_sub_task_item"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <TextView
+        android:id="@+id/sub_task_time_finished_text_view_finished_task_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/assistant_regular"
+        android:text="דקות המשימה שבוצעו"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:layout_weight="0.5"/>
+
+
+</LinearLayout>

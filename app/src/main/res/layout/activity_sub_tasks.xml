@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_constrain_layout_sub_tasks_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textDirection="rtl"
+    tools:context=".activities.SubTasksActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/back_onboardin_linear_layout_sub_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            app:backgroundTint="#ffffff"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/back_linear_layout_sub_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <ImageView
+        android:id="@+id/back_img_view_sub_task_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/my_tasks_text_view_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/assistant_bold"
+        android:text="עבודה בהיסטוריה"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain_layout_sub_line_sub_tasks_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layoutDirection="rtl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_tasks_text_view_sub_tasks_activity">
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_time_area_sub_tasks_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/min_to_use_text_view_bg"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/task_time_left_text_view_sub_tasks_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_bold"
+                android:text="25"
+                android:paddingRight="6dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/min_to_use_left_text_view_sub_tasks_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:paddingLeft="6dp"
+                android:paddingRight="4dp"
+                android:text="דקות לניצול"
+                android:textColor="@color/white"
+
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/reorder_img_view_sub_task_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:src="@drawable/ic_reorder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasks_recycler_view_sub_tasks_activity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constrain_layout_sub_line_sub_tasks_activity" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain_layout_no_subs_tasks_bg_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_alarm_clock_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#FFC224" />
+
+
+        <ImageView
+            android:id="@+id/pencil_img_view_main_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_big_pencil"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pencil_img_view_main_activity">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="כאן מפרקים את המשימה שלך לחלקים!"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:text="נפרק כל משימה לתתי משימות קטנות,\nשיעזרו לך לחלק נכון את הזמן"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.noam.wink.helper.uihelper.MovableFloatingActionButton
+        android:id="@+id/add_task_float_btn_sub_tasks_activity"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_plus"
+        app:backgroundTint="#682EDC"
+        app:fabCustomSize="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/constrain_layout_sub_line_sub_tasks_activity"
+        app:maxImageSize="46dp"
+        app:tint="#ffffff" />
+
+
+    <!--    ON BOARDING 1-->
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_onboarding1_bg_sub_tasks_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/onboarding_pop_up_background"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/add_task_float_btn_sub_tasks_activity"
+        app:layout_constraintLeft_toLeftOf="@id/add_task_float_btn_sub_tasks_activity"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text="מפרקים כל משימה לחלקים קטנים (תתי משימות)\nומגדירים כמה זמן יקח לנו לבצע כל תת משימה"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/onboarding_btn1_sub_tasks_activity"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/onboarding_pop_up_background"
+            android:backgroundTint="#682EDC"
+            android:fontFamily="@font/assistant_regular"
+            android:letterSpacing="0"
+            android:text="הבנתי"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/arrow1_img_view_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-4dp"
+        android:src="@drawable/ic_arrow"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/linear_layout_onboarding1_bg_sub_tasks_activity"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_onboarding1_bg_sub_tasks_activity" />
+
+    <!--    ON BOARDING 1-->
+
+
+    <!--    ON BOARDING 2-->
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_onboarding2_bg_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/onboarding_pop_up_background"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/constrain_layout_sub_line_sub_tasks_activity"
+        app:layout_constraintTop_toBottomOf="@id/constrain_layout_sub_line_sub_tasks_activity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text="סך כל הזמנים של תתי המשימות\nצריך להיות זהה לזמן הכולל שהוגדר למשימה"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/onboarding_btn2_sub_tasks_activity"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/onboarding_pop_up_background"
+            android:backgroundTint="#682EDC"
+            android:fontFamily="@font/assistant_regular"
+            android:letterSpacing="0"
+            android:text="הבנתי"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/arrow2_img_view_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="-1dp"
+        android:rotation="180"
+        android:src="@drawable/ic_arrow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/linear_layout_onboarding2_bg_sub_tasks_activity"
+        app:layout_constraintRight_toRightOf="@+id/linear_layout_onboarding2_bg_sub_tasks_activity" />
+
+
+    <!--    ON BOARDING 2-->
+
+
+    <!--    ON BOARDING 4-->
+
+    <LinearLayout
+        android:id="@+id/linear_layout_onboarding4_bg_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/onboarding_pop_up_background"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/add_task_float_btn_sub_tasks_activity"
+        app:layout_constraintLeft_toLeftOf="@id/add_task_float_btn_sub_tasks_activity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text="סיימתם לסדר את תתי המשימות?\nאפשר להתחיל בביצוע המשימה!"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/onboarding_btn4_sub_tasks_activity"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/onboarding_pop_up_background"
+            android:backgroundTint="#682EDC"
+            android:fontFamily="@font/assistant_regular"
+            android:letterSpacing="0"
+            android:text="הבנתי"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/arrow4_img_view_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-4dp"
+        android:src="@drawable/ic_arrow"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/linear_layout_onboarding4_bg_sub_tasks_activity"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_onboarding4_bg_sub_tasks_activity" />
+
+
+    <!--    ON BOARDING 4-->
+
+
+    <!--    ON BOARDING 3-->
+
+    <LinearLayout
+        android:id="@+id/linear_layout_onboarding3_bg_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/onboarding_pop_up_background"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/constrain_layout_sub_line_sub_tasks_activity"
+        app:layout_constraintTop_toBottomOf="@+id/constrain_layout_sub_line_sub_tasks_activity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text="כאן מסדרים את תתי המשימות\nלפי הסדר הנכון לכם לביצוע"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/onboarding_btn3_sub_tasks_activity"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/onboarding_pop_up_background"
+            android:backgroundTint="#682EDC"
+            android:fontFamily="@font/assistant_regular"
+            android:letterSpacing="0"
+            android:text="הבנתי"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/arrow3_img_view_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="-4dp"
+        android:rotation="180"
+        android:src="@drawable/ic_arrow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/linear_layout_onboarding3_bg_sub_tasks_activity"
+        app:layout_constraintLeft_toLeftOf="@+id/linear_layout_onboarding3_bg_sub_tasks_activity" />
+
+
+    <!--    ON BOARDING 3-->
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_skip_area_onboarding_sub_tasks_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant_regular"
+            android:text="דלג"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

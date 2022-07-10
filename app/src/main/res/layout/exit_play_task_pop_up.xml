@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="284dp"
+        android:background="@drawable/edit_text_rounded"
+
+        android:layoutDirection="rtl"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/x_img_view_exit_play_task_pop_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layoutDirection="rtl"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:padding="10dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_x" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_head_line_area_exit_play_task_pop_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/head_line_task_name_text_view_exit_play_task_pop_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="האם ברצונך לצאת מהמשימה?"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+            <TextView
+                android:id="@+id/sub_head_line_task_name_text_view_exit_play_task_pop_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/assistant_bold"
+                android:text="במידה וכן המשימה תתאפס"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:gravity="center"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/yes_exit_play_task_pop_up"
+                    android:layout_width="118dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_rounded"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="כן"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    app:backgroundTint="#682EDC" />
+
+
+                <Button
+                    android:id="@+id/no_exit_play_task_pop_up"
+                    android:layout_width="118dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/btn_rounded"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="לא"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    app:backgroundTint="#682EDC" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
